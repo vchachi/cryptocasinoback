@@ -14,7 +14,7 @@ class AddReferencesToGameDetailsTable extends Migration
     public function up()
     {
         Schema::table('game_details', function (Blueprint $table) {
-            $table->foreign('game_id')->references('id')->on('games');
+            $table->foreign('game_type_id')->references('id')->on('games');
             $table->foreign('customer_id')->references('id')->on('customers');
             $table->foreign('user_id')->references('id')->on('users');
         });
@@ -28,7 +28,7 @@ class AddReferencesToGameDetailsTable extends Migration
     public function down()
     {
         Schema::table('game_details', function (Blueprint $table) {
-            $table->dropForeign(['game_id']);
+            $table->dropForeign(['game_type_id']);
             $table->dropForeign(['customer_id']);
             $table->dropForeign(['user_id']);
         });

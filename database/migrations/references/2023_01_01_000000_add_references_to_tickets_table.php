@@ -14,7 +14,7 @@ class AddReferencesToTicketsTable extends Migration
     public function up()
     {
         Schema::table('tickets', function (Blueprint $table) {
-            $table->foreign('client_id')->references('id')->on('clients');
+            $table->foreign('customer_id')->references('id')->on('customers');
             $table->foreign('user_id')->references('id')->on('users');
         });
     }
@@ -27,7 +27,7 @@ class AddReferencesToTicketsTable extends Migration
     public function down()
     {
         Schema::table('tickets', function (Blueprint $table) {
-            $table->dropForeign(['client_id']);
+            $table->dropForeign(['customer_id']);
             $table->dropForeign(['user_id']);
         });
     }

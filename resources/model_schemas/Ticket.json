@@ -12,10 +12,10 @@
         "inView": false
     },
     {
-        "name": "client_id",
+        "name": "customer_id",
         "dbType": "foreignId",
         "htmlType": "select",
-        "validations": "required|exists:clients,id",
+        "validations": "required|exists:customers,id",
         "searchable": true,
         "fillable": true,
         "primary": false,

@@ -14,7 +14,7 @@ class AddReferencesToDepositTicketDetailsTable extends Migration
     public function up()
     {
         Schema::table('deposit_ticket_details', function (Blueprint $table) {
-            $table->foreign('ticket_id')->references('id')->on('tickets');
+            $table->foreign('deposit_ticket_id')->references('id')->on('deposit_tickets');
             $table->foreign('user_id')->references('id')->on('users');
         });
     }
@@ -27,7 +27,7 @@ class AddReferencesToDepositTicketDetailsTable extends Migration
     public function down()
     {
         Schema::table('deposit_ticket_details', function (Blueprint $table) {
-            $table->dropForeign(['ticket_id']);
+            $table->dropForeign(['deposit_ticket_id']);
             $table->dropForeign(['user_id']);
         });
     }

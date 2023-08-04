@@ -9,3 +9,4 @@
     {!! Form::label('email', 'Email:') !!}
     <p>{!! $user->email !!}</p>
 </div>
+

@@ -12,10 +12,10 @@
         "inView": false
     },
     {
-        "name": "ticket_id",
+        "name": "deposit_ticket_id",
         "dbType": "foreignId",
         "htmlType": "select",
-        "validations": "required|exists:tickets,id",
+        "validations": "required|exists:deposit_tickets,id",
         "searchable": true,
         "fillable": true,
         "primary": false,

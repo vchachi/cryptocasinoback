@@ -12,10 +12,10 @@
         "inView": false
     },
     {
-        "name": "game_id",
+        "name": "game_type_id",
         "dbType": "foreignId",
         "htmlType": "select",
-        "validations": "required|exists:games,id",
+        "validations": "required|exists:game_types,id",
         "searchable": true,
         "fillable": true,
         "primary": false,
