@@ -42,7 +42,7 @@ class GameLogController extends AppBaseController
      */
     public function create()
     {
-        $game_details = \App\Models\GameDetail::pluck('name','id');
+        $game_details = \App\Models\GameDetail::pluck('id','id');
 
         return view('game_logs.create')->with(compact('game_details'));
     }
@@ -102,7 +102,7 @@ class GameLogController extends AppBaseController
             return redirect(route('gameLogs.index'));
         }
 
-        $game_details = \App\Models\GameDetail::pluck('name','id');
+        $game_details = \App\Models\GameDetail::pluck('id','id');
 
         return view('game_logs.edit')->with(compact('gameLog', 'game_details'));
     }
