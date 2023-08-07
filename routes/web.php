@@ -69,3 +69,7 @@ Route::resource('ticketLogs', App\Http\Controllers\TicketLogController::class);
 
 
 Route::resource('customerBalanceLogs', App\Http\Controllers\CustomerBalanceLogController::class);
+
+
+Route::resource('gameLogs', App\Http\Controllers\GameLogController::class);
+

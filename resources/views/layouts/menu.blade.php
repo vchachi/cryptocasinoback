@@ -132,3 +132,11 @@
        <i class="nav-icon fa fa-user"></i> <p>Users</p>
     </a>
 </li>
+<li class="nav-item">
+    <a href="{{ route('gameLogs.index') }}"
+       class="nav-link {{ Request::is('gameLogs*') ? 'active' : '' }}">
+        <p>Game Logs</p>
+    </a>
+</li>
+
+
