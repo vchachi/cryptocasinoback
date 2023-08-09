@@ -1,26 +1,11 @@
 @extends('layouts.app')
 
 @section('content')
-    <!--section class="content-header">
-        <h1>
-            User
-        </h1>
-    </section>
-    <div class="content">
-        <div class="box box-primary">
-            <div class="box-body">
-                <div class="row" style="padding-left: 20px">
-                    @include('users.show_fields')
-                    <a href="{!! route('users.index') !!}" class="btn btn-default">Back</a>
-                </div>
-            </div>
-        </div>
-    </div-->
     <section class="content-header">
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
-                    <h1>User</h1>
+                    <h1>User Details</h1>
                 </div>
                 <div class="col-sm-6">
                     <a class="btn btn-default float-right"
