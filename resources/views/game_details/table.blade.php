@@ -12,9 +12,9 @@
         <tbody>
         @foreach($gameDetails as $gameDetail)
             <tr>
-                <td>{{ $gameDetail->game_type->name }}</td>
-            <td>{{ $gameDetail->customer->name }}</td>
-            <td>{{ $gameDetail->user->name }}</td>
+                <td>{{ $gameDetail->game_type?->name }}</td>
+            <td>{{ $gameDetail->customer?->name }}</td>
+            <td>{{ $gameDetail->user?->name }}</td>
             <td>{{ $gameDetail->status }}</td>
                 <td width="120">
                     {!! Form::open(['route' => ['gameDetails.destroy', $gameDetail->id], 'method' => 'delete']) !!}

@@ -12,8 +12,8 @@
         <tbody>
         @foreach($tickets as $ticket)
             <tr>
-                <td>{{ $ticket->customer->name }}</td>
-            <td>{{ $ticket->user->name }}</td>
+                <td>{{ $ticket->customer?->name }}</td>
+            <td>{{ $ticket->user?->name }}</td>
             <td>{{ $ticket->datetime }}</td>
             <td>{{ $ticket->status }}</td>
                 <td width="120">

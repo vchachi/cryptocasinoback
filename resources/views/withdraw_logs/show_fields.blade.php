@@ -13,7 +13,7 @@
 <!-- User Id Field -->
 <div class="col-sm-12">
     {!! Form::label('user_id', 'User:') !!}
-    <p>{{ $withdrawLog->user->name }}</p>
+    <p>{{ $withdrawLog->user?->name }}</p>
 </div>
 
 <!-- Value Field -->

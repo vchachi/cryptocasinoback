@@ -7,7 +7,7 @@
 <!-- User Id Field -->
 <div class="col-sm-12">
     {!! Form::label('user_id', 'User:') !!}
-    <p>{{ $ticketLog->user->name }}</p>
+    <p>{{ $ticketLog->user?->name }}</p>
 </div>
 
 <!-- Origin Field -->

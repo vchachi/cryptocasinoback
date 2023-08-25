@@ -14,7 +14,7 @@ class AddReferencesToGameLogsTable extends Migration
     public function up()
     {
         Schema::table('game_logs', function (Blueprint $table) {
-            $table->foreign('game_detail_id')->references('id')->on('game_details');
+            $table->foreign('game_detail_id')->references('id')->on('game_details')->onDelete('cascade');
         });
     }
 

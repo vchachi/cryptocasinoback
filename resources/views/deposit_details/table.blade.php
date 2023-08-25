@@ -14,9 +14,9 @@
         <tbody>
         @foreach($depositDetails as $depositDetail)
             <tr>
-                <td>{{ $depositDetail->deposit->name }}</td>
+                <td>{{ $depositDetail->deposit_id }}</td>
             <td>{{ $depositDetail->datetime }}</td>
-            <td>{{ $depositDetail->user->name }}</td>
+            <td>{{ $depositDetail->user?->name }}</td>
             <td>{{ $depositDetail->value }}</td>
             <td>{{ $depositDetail->tokens }}</td>
             <td>{{ $depositDetail->status }}</td>

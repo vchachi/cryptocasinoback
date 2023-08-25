@@ -14,8 +14,8 @@ class AddReferencesToWithdrawLogsTable extends Migration
     public function up()
     {
         Schema::table('withdraw_logs', function (Blueprint $table) {
-            $table->foreign('withdraw_id')->references('id')->on('withdraws');
-            $table->foreign('user_id')->references('id')->on('users');
+            $table->foreign('withdraw_id')->references('id')->on('withdraws')->onDelete('cascade');
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
         });
     }
 

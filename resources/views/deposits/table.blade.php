@@ -14,12 +14,12 @@
         <tbody>
         @foreach($deposits as $deposit)
             <tr>
-                <td>{{ $deposit->customer->name }}</td>
+                <td>{{ $deposit->customer?->name }}</td>
             <td>{{ $deposit->datetime }}</td>
-            <td>{{ $deposit->crypto->name }}</td>
+            <td>{{ $deposit->crypto?->name }}</td>
             <td>{{ $deposit->value }}</td>
             <td>{{ $deposit->status }}</td>
-            <td>{{ $deposit->verified->name }}</td>
+            <td>{{ $deposit->verified?->name }}</td>
                 <td width="120">
                     {!! Form::open(['route' => ['deposits.destroy', $deposit->id], 'method' => 'delete']) !!}
                     <div class='btn-group'>

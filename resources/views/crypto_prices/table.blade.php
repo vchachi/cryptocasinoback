@@ -11,7 +11,7 @@
         <tbody>
         @foreach($cryptoPrices as $cryptoPrice)
             <tr>
-                <td>{{ $cryptoPrice->crypto->name }}</td>
+                <td>{{ $cryptoPrice->crypto?->name }}</td>
             <td>{{ $cryptoPrice->datetime }}</td>
             <td>{{ $cryptoPrice->value }}</td>
                 <td width="120">

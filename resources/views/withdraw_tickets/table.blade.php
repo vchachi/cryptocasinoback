@@ -15,7 +15,7 @@
             <tr>
                 <td>{{ $withdrawTicket->ticket_id }}</td>
             <td>{{ $withdrawTicket->withdraw_id }}</td>
-            <td>{{ $withdrawTicket->user->name }}</td>
+            <td>{{ $withdrawTicket->user?->name }}</td>
             <td>{{ $withdrawTicket->datetime }}</td>
             <td>{{ $withdrawTicket->status }}</td>
                 <td width="120">

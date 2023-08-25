@@ -14,8 +14,8 @@ class AddReferencesToCustomerBalanceLogsTable extends Migration
     public function up()
     {
         Schema::table('customer_balance_logs', function (Blueprint $table) {
-            $table->foreign('customer_id')->references('id')->on('customers');
-            $table->foreign('user_id')->references('id')->on('users');
+            $table->foreign('customer_id')->references('id')->on('customers')->onDelete('cascade');
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
         });
     }
 

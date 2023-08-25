@@ -13,7 +13,7 @@
 <!-- User Id Field -->
 <div class="col-sm-12">
     {!! Form::label('user_id', 'User:') !!}
-    <p>{{ $withdrawTicket->user->name }}</p>
+    <p>{{ $withdrawTicket->user?->name }}</p>
 </div>
 
 <!-- Datetime Field -->

@@ -1,7 +1,7 @@
 <!-- Crypto Id Field -->
 <div class="col-sm-12">
     {!! Form::label('crypto_id', 'Crypto:') !!}
-    <p>{{ $cryptoPrice->crypto->name }}</p>
+    <p>{{ $cryptoPrice->crypto?->name }}</p>
 </div>
 
 <!-- Datetime Field -->

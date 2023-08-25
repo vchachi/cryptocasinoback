@@ -1,7 +1,7 @@
 <!-- Customer Id Field -->
 <div class="col-sm-12">
     {!! Form::label('customer_id', 'Customer:') !!}
-    <p>{{ $deposit->customer->name }}</p>
+    <p>{{ $deposit->customer?->name }}</p>
 </div>
 
 <!-- Datetime Field -->
@@ -13,7 +13,7 @@
 <!-- Crypto Id Field -->
 <div class="col-sm-12">
     {!! Form::label('crypto_id', 'Crypto:') !!}
-    <p>{{ $deposit->crypto->name }}</p>
+    <p>{{ $deposit->crypto?->name }}</p>
 </div>
 
 <!-- Value Field -->
@@ -31,6 +31,6 @@
 <!-- Verified Id Field -->
 <div class="col-sm-12">
     {!! Form::label('verified_id', 'Verified:') !!}
-    <p>{{ $deposit->verified->name }}</p>
+    <p>{{ $deposit->verified?->name }}</p>
 </div>
 

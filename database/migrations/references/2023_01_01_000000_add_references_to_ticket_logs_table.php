@@ -14,8 +14,8 @@ class AddReferencesToTicketLogsTable extends Migration
     public function up()
     {
         Schema::table('ticket_logs', function (Blueprint $table) {
-            $table->foreign('ticket_id')->references('id')->on('tickets');
-            $table->foreign('user_id')->references('id')->on('users');
+            $table->foreign('ticket_id')->references('id')->on('tickets')->onDelete('cascade');
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
         });
     }
 

@@ -14,9 +14,9 @@ class AddReferencesToWithdrawTicketsTable extends Migration
     public function up()
     {
         Schema::table('withdraw_tickets', function (Blueprint $table) {
-            $table->foreign('ticket_id')->references('id')->on('tickets');
-            $table->foreign('withdraw_id')->references('id')->on('withdraws');
-            $table->foreign('user_id')->references('id')->on('users');
+            $table->foreign('ticket_id')->references('id')->on('tickets')->onDelete('cascade');
+            $table->foreign('withdraw_id')->references('id')->on('withdraws')->onDelete('cascade');
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
         });
     }
 

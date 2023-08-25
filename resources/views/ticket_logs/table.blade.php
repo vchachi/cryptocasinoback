@@ -14,7 +14,7 @@
         @foreach($ticketLogs as $ticketLog)
             <tr>
                 <td>{{ $ticketLog->ticket_id }}</td>
-            <td>{{ $ticketLog->user->name }}</td>
+            <td>{{ $ticketLog->user?->name }}</td>
             <td>{{ $ticketLog->origin }}</td>
             <td>{{ $ticketLog->datetime }}</td>
             <td>{{ $ticketLog->text }}</td>

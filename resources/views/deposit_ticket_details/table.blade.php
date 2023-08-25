@@ -15,7 +15,7 @@
         @foreach($depositTicketDetails as $depositTicketDetail)
             <tr>
                 <td>{{ $depositTicketDetail->deposit_ticket_id }}</td>
-            <td>{{ $depositTicketDetail->user->name }}</td>
+            <td>{{ $depositTicketDetail->user?->name }}</td>
             <td>{{ $depositTicketDetail->datetime }}</td>
             <td>{{ $depositTicketDetail->text }}</td>
             <td>{{ $depositTicketDetail->status }}</td>

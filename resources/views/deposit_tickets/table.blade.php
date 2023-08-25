@@ -15,7 +15,7 @@
             <tr>
                 <td>{{ $depositTicket->ticket_id }}</td>
             <td>{{ $depositTicket->deposit_id }}</td>
-            <td>{{ $depositTicket->user->name }}</td>
+            <td>{{ $depositTicket->user?->name }}</td>
             <td>{{ $depositTicket->datetime }}</td>
             <td>{{ $depositTicket->status }}</td>
                 <td width="120">

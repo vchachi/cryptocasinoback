@@ -14,7 +14,7 @@ class AddReferencesToCryptoPricesTable extends Migration
     public function up()
     {
         Schema::table('crypto_prices', function (Blueprint $table) {
-            $table->foreign('crypto_id')->references('id')->on('cryptos');
+            $table->foreign('crypto_id')->references('id')->on('cryptos')->onDelete('cascade');
         });
     }
 

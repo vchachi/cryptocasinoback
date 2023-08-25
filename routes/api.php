@@ -65,3 +65,6 @@ Route::resource('customer_balance_logs', App\Http\Controllers\API\CustomerBalanc
 
 
 Route::resource('game_logs', App\Http\Controllers\API\GameLogAPIController::class);
+
+
+Route::resource('users', App\Http\Controllers\API\UserAPIController::class);

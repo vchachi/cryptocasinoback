@@ -16,7 +16,7 @@
             <tr>
                 <td>{{ $withdrawLog->withdraw_id }}</td>
             <td>{{ $withdrawLog->datetime }}</td>
-            <td>{{ $withdrawLog->user->name }}</td>
+            <td>{{ $withdrawLog->user?->name }}</td>
             <td>{{ $withdrawLog->value }}</td>
             <td>{{ $withdrawLog->tokens }}</td>
             <td>{{ $withdrawLog->status }}</td>

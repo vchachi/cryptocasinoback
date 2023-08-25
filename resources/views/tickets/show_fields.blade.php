@@ -1,13 +1,13 @@
 <!-- Customer Id Field -->
 <div class="col-sm-12">
     {!! Form::label('customer_id', 'Customer:') !!}
-    <p>{{ $ticket->customer->name }}</p>
+    <p>{{ $ticket->customer?->name }}</p>
 </div>
 
 <!-- User Id Field -->
 <div class="col-sm-12">
     {!! Form::label('user_id', 'User:') !!}
-    <p>{{ $ticket->user->name }}</p>
+    <p>{{ $ticket->user?->name }}</p>
 </div>
 
 <!-- Datetime Field -->

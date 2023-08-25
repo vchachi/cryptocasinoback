@@ -17,13 +17,13 @@
         <tbody>
         @foreach($withdraws as $withdraw)
             <tr>
-                <td>{{ $withdraw->customer->name }}</td>
+                <td>{{ $withdraw->customer?->name }}</td>
             <td>{{ $withdraw->datetime }}</td>
-            <td>{{ $withdraw->crypto->name }}</td>
+            <td>{{ $withdraw->crypto?->name }}</td>
             <td>{{ $withdraw->value }}</td>
             <td>{{ $withdraw->tokens }}</td>
             <td>{{ $withdraw->status }}</td>
-            <td>{{ $withdraw->confirmed->name }}</td>
+            <td>{{ $withdraw->confirmed?->name }}</td>
             <td>{{ $withdraw->withdraw_address }}</td>
             <td>{{ $withdraw->customer_name }}</td>
                 <td width="120">

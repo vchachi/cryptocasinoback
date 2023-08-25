@@ -14,8 +14,8 @@
         <tbody>
         @foreach($customerBalanceLogs as $customerBalanceLog)
             <tr>
-                <td>{{ $customerBalanceLog->customer->name }}</td>
-            <td>{{ $customerBalanceLog->user->name }}</td>
+                <td>{{ $customerBalanceLog->customer?->name }}</td>
+            <td>{{ $customerBalanceLog->user?->name }}</td>
             <td>{{ $customerBalanceLog->datetime }}</td>
             <td>{{ $customerBalanceLog->awarded_tokens }}</td>
             <td>{{ $customerBalanceLog->taken_tokens }}</td>

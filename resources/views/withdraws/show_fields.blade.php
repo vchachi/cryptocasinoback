@@ -1,7 +1,7 @@
 <!-- Customer Id Field -->
 <div class="col-sm-12">
     {!! Form::label('customer_id', 'Customer:') !!}
-    <p>{{ $withdraw->customer->name }}</p>
+    <p>{{ $withdraw->customer?->name }}</p>
 </div>
 
 <!-- Datetime Field -->
@@ -13,7 +13,7 @@
 <!-- Crypto Id Field -->
 <div class="col-sm-12">
     {!! Form::label('crypto_id', 'Crypto:') !!}
-    <p>{{ $withdraw->crypto->name }}</p>
+    <p>{{ $withdraw->crypto?->name }}</p>
 </div>
 
 <!-- Value Field -->
@@ -37,7 +37,7 @@
 <!-- Confirmed Id Field -->
 <div class="col-sm-12">
     {!! Form::label('confirmed_id', 'Confirmed:') !!}
-    <p>{{ $withdraw->confirmed->name }}</p>
+    <p>{{ $withdraw->confirmed?->name }}</p>
 </div>
 
 <!-- Withdraw Address Field -->

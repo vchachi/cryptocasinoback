@@ -14,9 +14,9 @@ class AddReferencesToDepositTicketsTable extends Migration
     public function up()
     {
         Schema::table('deposit_tickets', function (Blueprint $table) {
-            $table->foreign('ticket_id')->references('id')->on('tickets');
-            $table->foreign('deposit_id')->references('id')->on('deposits');
-            $table->foreign('user_id')->references('id')->on('users');
+            $table->foreign('ticket_id')->references('id')->on('tickets')->onDelete('cascade');
+            $table->foreign('deposit_id')->references('id')->on('deposits')->onDelete('cascade');
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
         });
     }
 

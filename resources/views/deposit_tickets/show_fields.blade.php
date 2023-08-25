@@ -13,7 +13,7 @@
 <!-- User Id Field -->
 <div class="col-sm-12">
     {!! Form::label('user_id', 'User:') !!}
-    <p>{{ $depositTicket->user->name }}</p>
+    <p>{{ $depositTicket->user?->name }}</p>
 </div>
 
 <!-- Datetime Field -->
