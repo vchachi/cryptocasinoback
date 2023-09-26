@@ -19,7 +19,9 @@ class GameTypeRepository extends BaseRepository
     protected $fieldSearchable = [
         'name',
         'status',
-        'details'
+        'details',
+        'schema',
+        'settings'
     ];
 
     /**

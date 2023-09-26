@@ -56,6 +56,9 @@ class GameTypeController extends AppBaseController
     {
         $input = $request->all();
 
+        $input['schema'] = json_decode($input['schema'] ?? '{}', true);
+        $input['settings'] = json_decode($input['settings'] ?? '{}', true);
+
         $gameType = $this->gameTypeRepository->create($input);
 
         Flash::success('Game Type saved successfully.');
@@ -121,7 +124,18 @@ class GameTypeController extends AppBaseController
             return redirect(route('gameTypes.index'));
         }
 
-        $gameType = $this->gameTypeRepository->update($request->all(), $id);
+        $input = $request->all();
+
+        info($input['schema']);
+        info($input['settings']);
+
+        $input['schema'] = json_decode($input['schema'] ?? '{}', true);
+        $input['settings'] = json_decode($input['settings'] ?? '{}', true);
+
+        info($input['schema']);
+        info($input['settings']);
+
+        $gameType = $this->gameTypeRepository->update($input, $id);
 
         Flash::success('Game Type updated successfully.');
 

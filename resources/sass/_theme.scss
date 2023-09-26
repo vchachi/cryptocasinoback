@@ -1,0 +1,41 @@
+
+// JSON Editor
+.custom-json-editor {
+
+  div[data-schemaid="root"] {
+  
+    .card-title {
+      float: none;
+    }
+
+    > .card-body {
+      background-color: #fdfdfd !important;
+    }
+
+    label {
+      font-size: 16px;
+      margin-right: 5px;
+    }
+
+    .json-editor-btn-collapse {
+      right: 0;
+      z-index: 1;
+      position: absolute;
+    }
+
+    div[data-schemapath^="root."] {
+      span.btn-group {
+        float: right;
+        margin-top: -35px;
+        margin-bottom: 20px;
+        padding-right: 10px;
+      } 
+    }
+  }
+}
+
+#settings-editor {
+  .card-body {
+    margin-top: -23px;
+  }
+}

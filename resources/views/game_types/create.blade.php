@@ -37,3 +37,13 @@
         </div>
     </div>
 @endsection
+
+@section('third_party_scripts')
+    @if (Auth::user()->isSuperAdmin())
+        @include('game_types.scripts.schema-editor')
+    @endif
+
+    @if (Auth::user()->isAdmin())
+        @include('game_types.scripts.settings-editor')
+    @endif
+@endsection

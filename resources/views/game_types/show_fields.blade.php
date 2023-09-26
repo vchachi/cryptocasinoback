@@ -16,3 +16,9 @@
     <p>{{ $gameType->details }}</p>
 </div>
 
+<!-- Settings Field -->
+<div class="col-sm-12">
+    {!! Form::label('settings', 'Settings:') !!}
+    <p>{{ $gameType->settings }}</p>
+</div>
+

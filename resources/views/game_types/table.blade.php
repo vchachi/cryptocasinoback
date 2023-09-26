@@ -5,6 +5,7 @@
             <th>Name</th>
         <th>Status</th>
         <th>Details</th>
+        <th>Settings</th>
             <th colspan="3">Action</th>
         </tr>
         </thead>
@@ -14,6 +15,7 @@
                 <td>{{ $gameType->name }}</td>
             <td>{{ $gameType->status }}</td>
             <td>{{ $gameType->details }}</td>
+            <td>{{ json_encode($gameType->settings) }}</td>
                 <td width="120">
                     {!! Form::open(['route' => ['gameTypes.destroy', $gameType->id], 'method' => 'delete']) !!}
                     <div class='btn-group'>

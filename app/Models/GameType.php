@@ -31,7 +31,9 @@ class GameType extends Model
     public $fillable = [
         'name',
         'status',
-        'details'
+        'details',
+        'schema',
+        'settings'
     ];
 
     /**
@@ -42,7 +44,9 @@ class GameType extends Model
     protected $casts = [
         'name' => 'string',
         'status' => 'string',
-        'details' => 'string'
+        'details' => 'string',
+        //'schema' => 'array',
+        //'settings' => 'array'
     ];
 
     /**
@@ -53,7 +57,9 @@ class GameType extends Model
     public static $rules = [
         'name' => 'required|min:3|max:30',
         'status' => 'required|min:3|max:20',
-        'details' => 'required|min:3|max:255'
+        'details' => 'required|min:3|max:255',
+        'schema' => 'nullable|json',
+        'settings' => 'nullable|json'
     ];
 
     

@@ -19,6 +19,8 @@ class CreateGameTypesTable extends Migration
             $table->string('name', 30);
             $table->string('status', 20);
             $table->string('details', 255);
+            $table->json('schema')->nullable();
+            $table->json('settings')->nullable();
             $table->timestamps();
             $table->softDeletes();
         });
