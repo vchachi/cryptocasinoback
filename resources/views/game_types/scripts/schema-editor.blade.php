@@ -2,9 +2,8 @@
 
 document.addEventListener("DOMContentLoaded", (event) => {
     const element = document.getElementById('schema-editor');
-    const startval1 = @if ($gameType ?? false) {!! $gameType->schema ?: '{}' !!} @else {} @endif;
-    //const startval = { "settings": [ { "name": "interval", "type": "integer", "default": 5, "required": false }, { "name": "range", "type": "sting", "default": "[0,5]", "required": true }, { "name": "odds", "type": "sting", "default": "{ \"0.5\": 60, \"2\": 25, \"2.5\": 10, \"5\": 5 }", "required": true }, { "name": "max", "type": "number", "default": 2.3, "required": true } ] };
-    const startval = [ { "name": "interval", "type": "integer", "default": 5, "required": false }, { "name": "range", "type": "sting", "default": "[0,5]", "required": true }, { "name": "odds", "type": "sting", "default": "{ \"0.5\": 60, \"2\": 25, \"2.5\": 10, \"5\": 5 }", "required": true }, { "name": "max", "type": "number", "default": 2.3, "required": true } ];
+    const startval = @if ($gameType ?? false) {!! $gameType->schema ?: '{}' !!} @else {} @endif;
+    //const startval = [ { "name": "interval", "type": "integer", "default": 5, "required": false }, { "name": "range", "type": "sting", "default": "[0,5]", "required": true }, { "name": "odds", "type": "sting", "default": "{ \"0.5\": 60, \"2\": 25, \"2.5\": 10, \"5\": 5 }", "required": true }, { "name": "max", "type": "number", "default": 2.3, "required": true } ];
     const options = {
         compact: true,
         schema: {

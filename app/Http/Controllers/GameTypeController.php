@@ -126,14 +126,14 @@ class GameTypeController extends AppBaseController
 
         $input = $request->all();
 
-        info($input['schema']);
-        info($input['settings']);
+        //info($input['schema']);
+        //info($input['settings']);
 
-        $input['schema'] = json_decode($input['schema'] ?? '{}', true);
-        $input['settings'] = json_decode($input['settings'] ?? '{}', true);
+        if (request()->has('schema')) $input['schema'] = json_decode($input['schema'] ?? '{}', true);
+        if (request()->has('settings')) $input['settings'] = json_decode($input['settings'] ?? '{}', true);
 
-        info($input['schema']);
-        info($input['settings']);
+        //info($input['schema']);
+        //info($input['settings']);
 
         $gameType = $this->gameTypeRepository->update($input, $id);
 
